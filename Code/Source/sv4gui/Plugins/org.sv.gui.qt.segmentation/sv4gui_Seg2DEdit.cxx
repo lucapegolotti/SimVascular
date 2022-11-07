@@ -1995,8 +1995,9 @@ void sv4guiSeg2DEdit::initialize()
     std::cout << "[initialize] image_absolute_file_name: " << m_imageFilePath << std::endl;
   }
 
-  ml_utils = sv4gui_MachineLearningUtils::getInstance("googlenet_c30_train300k_aug10_clean");
-  ml_utils->setImage(m_imageFilePath);
+//   ml_utils = sv4gui_MachineLearningUtils::getInstance("googlenet_c30_train300k_aug10_clean");
+//   ml_utils->setImage(m_imageFilePath);
+  ml_interface = ML2DSegmentationInterface::getInstance("network_name");
 }
 
 /**

@@ -70,6 +70,8 @@
 #include <QWidget>
 #include <QItemSelection>
 
+#include <ML2DSegmentationInterface.h>
+
 namespace Ui {
 class sv4guiSeg2DEdit;
 }
@@ -304,7 +306,7 @@ protected:
     // ml additions
     std::string m_imageFilePath;
     sv4gui_MachineLearningUtils* ml_utils;
-
+    ML2DSegmentationInterface* ml_interface;
     int m_interval = 50;
 
     int m_numFourierModes = 7;

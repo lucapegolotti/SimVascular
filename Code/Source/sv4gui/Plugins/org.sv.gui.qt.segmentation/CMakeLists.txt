@@ -36,6 +36,9 @@ if(SV_USE_TINYXML)
   include_directories(${TINYXML_INCLUDE_DIR})
 endif()
 
+# for now we manually include the segmentation directory here
+include_directories("${ML2DSEGMENTATION_INCLUDE_DIR}")
+
 if(SV_USE_MITK_CONFIG)
   mitk_create_plugin(
     EXPORT_DIRECTIVE SV_QT_SEGMENTATION
